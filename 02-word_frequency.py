@@ -20,10 +20,14 @@ Hints:
 import sys
 
 def word_frequency(text):
-    frequencies = {} # Dictionary to store word frequencies
-
-    # Your code here
-    
+    frequencies = {'name': 'Alice', 
+                   'location':'Wonderland',
+                   'direction': 'down', 
+                   'animal': 'cat', 
+                   'object': 'book',
+                   'action': 'climb', 
+                   'pronoun': 'she', 
+                   'color': 'golden'} # Dictionary to store word frequencies 
     return frequencies
 
 # Scaffold for opening a file and running word_frequency() on the contents
