@@ -42,7 +42,13 @@ def find_greatest_product(number_string, adjacent_digits=13):
     max_product = 0
     
     # Your code here
-
+    for i in range(len(number_string) - adjacent_digits +1):    #indexing until we reach the total length of string minus the 14th index value giving us a 13 digit window. 
+        slicing = number_string[i:i + adjacent_digits]          #slicing to 13 digit window
+        product = 1                                             #initializing product holder
+        for digit in slicing: 
+            product *= int(digit)                               #multiplying current product by the digit (in integer form)
+        if product > max_product: 
+            max_product = product                               #if product is greater than max product, it becomes the new winner and goes into "max product" slot
     return max_product
 
 if __name__ == "__main__":
